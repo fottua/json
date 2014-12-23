@@ -17,7 +17,7 @@
   },
   "subdomain": "MultiWebRTC",
   "scripts": {
-    "start": "site/server.js"
+    "start": "node site/server.js"
   },
   "author": "nik bir"
 }
