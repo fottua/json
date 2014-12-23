@@ -15,5 +15,5 @@
   "scripts": {
     "start": "site/server.js"
   },
-  "author": "nik bir",
+  "author": "nik bir"
 }
