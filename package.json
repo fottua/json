@@ -1,9 +1,13 @@
 {
-  "name": "RTC",
+  "name": "fottua",
   "description": "user webrtc",
   "version": "0.0.2-1",
   "engines": {
     "node": ">= 0.6.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bussi/fottua.git"
   },
   "dependencies": {
     "webrtc.io": "latest",
