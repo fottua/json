@@ -78,7 +78,8 @@ if (navigator.webkitGetUserMedia) {
     if (navigator.mozGetUserMedia) {
       return {
         "iceServers": [{
-          "url": "stun:23.21.150.121"
+          "url": "turn:numb.viagenie.ca"
+          //"url": "stun:23.21.150.121"
         }]
       };
     }
