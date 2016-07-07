@@ -78,7 +78,7 @@ if (navigator.webkitGetUserMedia) {
     if (navigator.mozGetUserMedia) {
       return {
         "iceServers": [{
-          "url": "turn:numb.viagenie.ca"
+          "url": "stun.l.google.com:19302"
           //"url": "stun:23.21.150.121"
         }]
       };
