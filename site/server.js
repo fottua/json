@@ -1,4 +1,9 @@
+var app = require('express')();
+var server = require('http').createServer(app);
 
+var port = process.env.PORT || 80;
+server.listen(port);
+var obj={};
 var unirest = require('unirest');
 
 unirest.get("http://stats.zello.com/channels-suggest/ru")
@@ -6,10 +11,12 @@ unirest.get("http://stats.zello.com/channels-suggest/ru")
   .end(response=> {
     if (response.ok) {
       
-	  var obj = JSON.parse(response.raw_body);
-	  console.log("Got a response: ", obj[0].categories[0])
+	  obj = JSON.parse(response.raw_body);
+	  return obj;
     } else {
       console.log("Got an error: ", response.error)
     }
   })
-  
+  app.get('/', function (req, res) {
+  res.send(obj[0]);
+});
