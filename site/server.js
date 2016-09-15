@@ -6,16 +6,6 @@ server.listen(port);
 var obj={};
 var unirest = require('unirest');
 
-
-app.get('/', function(req, res) {
-  res.sendfile(__dirname + '/index.html');
-});
-
-
-
-
-
-
 unirest.get("http://stats.zello.com/channels-suggest/ru")
   .send()
   .end(response=> {
@@ -28,5 +18,5 @@ unirest.get("http://stats.zello.com/channels-suggest/ru")
     }
   })
   app.get('/', function (req, res) {
-  res.send(obj[0]);
+  res.send(obj);
 });
