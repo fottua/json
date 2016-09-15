@@ -9,6 +9,7 @@ server.listen(port);
 
 app.get('/', function(req, res) {
   res.sendfile(__dirname + '/index.html');
+  res.send(request);
 });
 
 app.get('/style.css', function(req, res) {
