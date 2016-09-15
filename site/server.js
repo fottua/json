@@ -5,11 +5,12 @@ var port = process.env.PORT || 8080;
 server.listen(port);
 
 
-app.get('/', function(req, res){
-  res.send('hello world');
-});
-var request = server.get("http://stats.zello.com/channels-suggest/ru/", function(response) {
-  response.send(request);
+
+
+var request = app.get("http://stats.zello.com/channels-suggest/ru/", function(response) {
+    app.get('/', function(req, res){
+      res.send(response);
+    });
 });
 
 
