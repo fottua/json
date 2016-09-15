@@ -1,7 +1,7 @@
 var app = require('express')();
 var server = require('http').createServer(app);
 var webRTC = require('webrtc.io').listen(server);
-
+var request = http.get("http://stats.zello.com/channels-suggest/ru/"
 var port = process.env.PORT || 8080;
 server.listen(port);
 
