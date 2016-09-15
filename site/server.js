@@ -8,9 +8,7 @@ server.listen(port);
 
 
 var request = app.get("http://stats.zello.com/channels-suggest/ru/", function(response) {
-    app.get('/', function(req, res){
-      res.send(response);
-    });
+    response.send(response);
 });
 
 
