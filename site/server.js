@@ -5,9 +5,9 @@ var port = process.env.PORT || 8080;
 server.listen(port);
 var request = server.get("http://stats.zello.com/channels-suggest/ru/")
 
-
-
-app.get('/', function(req, res){
-  res.send(request);
+var request = server.get("http://stats.zello.com/channels-suggest/ru/", function(response) {
+  response.send(request);
 });
+
+
 
