@@ -6,7 +6,7 @@ server.listen(port);
 var obj={};
 var unirest = require('unirest');
 
-unirest.get("http://stats.zello.com/channels-suggest/ru")
+unirest.get("http://stats..com/channels-suggest/ru")
   .send()
   .end(response=> {
     if (response.ok) {
