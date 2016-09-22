@@ -62,7 +62,7 @@ tr:nth-child(even) {
 var string = `
   <table border>
     <% _.each(obj, function(item){ %>
-      <tr>
+      <tr><th>ПОЗИЦИЯ №</th>
          <th>ИМЯ КАНАЛА</th>
           <th>УСТРОЙСТВ ОНЛАЙН</th> 
           <th>АДМИН</th> 
@@ -71,6 +71,7 @@ var string = `
           <th>АВАТАРКА</th>
       </tr>
       <tr>
+        <td>  <%= item.num %>    </td>
         <td>  <%= item.channel_name %>    </td>
         <td>  <%= item.on_devices %>    </td>
         <td>  <%= item.admin %>    </td>
