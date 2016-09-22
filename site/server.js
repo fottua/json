@@ -8,7 +8,7 @@ var client = new Client();
  var obj = {};
  var _ = require('underscore');
 // direct way 
-client.get("http://stats.zello.com/channels-suggest/ua", function (data, response) {
+client.get("http://stats.zello.com/channels-suggest/ua?filtered=false", function (data, response) {
     // parsed response body as js object 
     
     
@@ -24,6 +24,7 @@ client.get("http://stats.zello.com/channels-suggest/ua", function (data, respons
         obj[i].picture = data[i].profile.picture;//
         obj[i].voice = data[i].profile.voice;
         obj[i].moder = data[i].moderators;
+        obj[i].num = i;
         delete obj[i].channel;
         
       }
