@@ -6,6 +6,7 @@ var Client = require('node-rest-client').Client;
 server.listen(port);
 var client = new Client();
  var obj = {};
+ var c = 1;
  var _ = require('underscore');
 // direct way 
 client.get("http://stats.zello.com/channels-suggest/ru?filtered=false", function (data, response) {
@@ -24,7 +25,8 @@ client.get("http://stats.zello.com/channels-suggest/ru?filtered=false", function
         obj[i].picture = data[i].profile.picture;//
         obj[i].voice = data[i].profile.voice;
         obj[i].moder = data[i].moderators;
-        obj[i].num = i;
+        obj[i].num = c;
+        c++
         delete obj[i].channel;
         
       }
