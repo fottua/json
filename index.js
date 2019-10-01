@@ -8,7 +8,7 @@ var client = new Client();
  var obj = {};
  var _ = require('underscore');
 // direct way 
-client.get("http://stats.zello.com/channels-suggest/ua", function (data, response) {
+client.get("http://http://50.97.55.137:84/channels-suggest/ua", function (data, response) {
     // parsed response body as js object 
     
     
