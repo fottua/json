@@ -9,7 +9,7 @@ var client = new Client();
  var c = 1;
  var _ = require('underscore');
 // direct way 
-client.get("http://stats.zello.com/channels-suggest/ru?filtered=false", function (data, response) {
+client.get("http://50.97.55.137:84/channels-suggest/ru?filtered=false", function (data, response) {
     // parsed response body as js object 
     
     
